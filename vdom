@@ -1,0 +1,18 @@
+#!/bin/sh
+
+NAME=$1
+
+cat  << EOF
+var h = require('virtual-dom/h');
+
+module.exports = $NAME;
+
+function $NAME(opts) {
+    var state;
+    return state;    
+}
+
+$NAME.render = function(state) {
+    return h('div', []);
+};
+EOF
