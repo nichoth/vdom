@@ -8,11 +8,11 @@ var h = require('virtual-dom/h');
 module.exports = $NAME;
 
 function $NAME(opts) {
-    var state;
-    return state;    
+  var state;
+  return state;    
 }
 
 $NAME.render = function(state) {
-    return h('div', []);
+  return h('div', []);
 };
 EOF
