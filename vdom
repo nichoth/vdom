@@ -1,15 +1,20 @@
 #!/bin/sh
 
-NAME=$1
+FILE_PATH=$1
+NAME=`basename "$FILE_PATH" .js`
 
-cat  << EOF
+cat  << EOF > $FILE_PATH
 var h = require('virtual-dom/h');
+var state = require('@nichoth/state');
 
 module.exports = $NAME;
 
 function $NAME(opts) {
-  var state;
-  return state;    
+  var s = state({
+    
+  });
+  
+  return s;    
 }
 
 $NAME.render = function(state) {
